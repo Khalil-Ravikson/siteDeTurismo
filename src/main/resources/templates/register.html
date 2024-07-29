@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .bg-dark-subtle {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="logo navbar navbar-expand-lg fixed-top bg-dark-subtle">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white" href="#">Turistando</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container mt-5 pt-5">
+  <h2 class="text-center mb-4">Register</h2>
+  <form th:action="@{/register}" th:object="${user}" method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" th:field="*{username}" required class="form-control">
+      <div class="invalid-feedback">Por favor, preencha o username.</div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" th:field="*{password}" required class="form-control">
+      <div class="invalid-feedback">Por favor, preencha a senha.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+  <div th:if="${error}" th:text="${error}" class="text-danger"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

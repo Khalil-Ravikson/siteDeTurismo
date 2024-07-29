@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurismoSlz - Avaliações de Turismo</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">Turistando</a>
+            <div class="button-container">
+                <a href="/listar" class="button">Listar Avaliações</a>
+                <!-- Botão de Enviar Avaliação só é exibido se o usuário estiver logado -->
+                <a  href="/cadastrar" class="button">Enviar Avaliação</a>
+                <!-- Botão de Login/Logout -->
+                <a  href="/login" class="button">Login</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubra os Melhores Destinos</h1>
+            <p>Avaliações autênticas de viajantes reais</p>
+            <a href="#" class="cta-button">Comece a Explorar</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="features">
+            <div class="feature">
+                <i class="fas fa-map-marked-alt"></i>
+                <h2>Destinos Incríveis</h2>
+                <p>Explore avaliações de destinos ao redor do mundo.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-edit"></i>
+                <h2>Avaliações Autênticas</h2>
+                <p>Leia e compartilhe experiências reais de viagem.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lightbulb"></i>
+                <h2>Dicas Úteis</h2>
+                <p>Obtenha insights valiosos para planejar sua próxima viagem.</p>
+            </div>
+        </section>
+
+<!--        &lt;!&ndash; Conteúdo principal da página será inserido aqui &ndash;&gt;-->
+<!--        <div th:if="${mensagem}" th:text="${mensagem}"></div>-->
+<!--        <div th:replace="${conteudo}">-->
+<!--            &lt;!&ndash; O conteúdo específico de cada página será inserido aqui &ndash;&gt;-->
+<!--        </div>-->
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 TurAval - Avaliações de Turismo. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
